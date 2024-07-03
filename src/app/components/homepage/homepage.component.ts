@@ -16,7 +16,7 @@ export class HomepageComponent implements OnInit, OnDestroy, AfterViewInit {
   navItems = [
     { id: 'nav-home', section: 'home', label: 'Home', icon: 'fas fa-home' },
     { id: 'nav-about', section: 'about', label: 'About', icon: 'fas fa-user' },
-    { id: 'nav-resume', section: 'resume', label: 'Resume', icon: 'fas fa-file-alt' },
+    { id: 'nav-resume', section: 'resume', label: 'Experiences', icon: 'fas fa-file-alt' },
     { id: 'nav-projects', section: 'projects', label: 'Projects', icon: 'fas fa-briefcase' },
     { id: 'nav-contact', section: 'contact', label: 'Contact', icon: 'fas fa-envelope' }
   ];

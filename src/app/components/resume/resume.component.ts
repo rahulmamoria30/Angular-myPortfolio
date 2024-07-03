@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./resume.component.css']
 })
 export class ResumeComponent {
+  expandedSection: string = '';
 
+  toggleDetails(sectionId: string): void {
+    this.expandedSection = (this.expandedSection === sectionId) ? '' : sectionId;
+  }
 }

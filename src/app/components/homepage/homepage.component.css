@@ -8,14 +8,14 @@
 
 
 .section {
-    height: 100vh; /* Example height to ensure scrolling */
+    height: 100vh;
   }
   
   .nav-link.active {
-    background-color: #4a5568; /* Example active background color */
+    background-color: #4a5568;
   }
 .fas {
-    font-size: 20px; /* Adjust the size of the icons */
+    font-size: 20px; 
 }
 
 .fab {
