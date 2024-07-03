@@ -7,7 +7,13 @@
 }
 
 
-
+.section {
+    height: 100vh; /* Example height to ensure scrolling */
+  }
+  
+  .nav-link.active {
+    background-color: #4a5568; /* Example active background color */
+  }
 .fas {
     font-size: 20px; /* Adjust the size of the icons */
 }

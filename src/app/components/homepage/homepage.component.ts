@@ -1,11 +1,11 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']
 })
-export class HomepageComponent implements OnInit, OnDestroy {
+export class HomepageComponent implements OnInit, OnDestroy, AfterViewInit {
 
   activeLinkId: string = 'nav-home';
   roles: string[] = ["Developer", "Software Engineer", "Designer"];
@@ -21,6 +21,8 @@ export class HomepageComponent implements OnInit, OnDestroy {
     { id: 'nav-contact', section: 'contact', label: 'Contact', icon: 'fas fa-envelope' }
   ];
 
+  private observer: IntersectionObserver | null = null;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -28,16 +30,19 @@ export class HomepageComponent implements OnInit, OnDestroy {
     this.startUpdatingRole(); 
   }
 
+  ngAfterViewInit(): void {
+    this.initIntersectionObserver();
+  }
+
   ngOnDestroy(): void {
     this.stopUpdatingRole(); 
+    if (this.observer) {
+      this.observer.disconnect();
+    }
   }
 
   setActive(id: string) {
     this.activeLinkId = id;
-    const section = this.navItems.find(item => item.id === id)?.section;
-    if (section) {
-      this.scrollToSection(section);
-    }
   }
 
   startUpdatingRole(): void {
@@ -57,5 +62,33 @@ export class HomepageComponent implements OnInit, OnDestroy {
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
+  }
+
+  initIntersectionObserver(): void {
+    const options = {
+      root: null, // Use the viewport as the root
+      rootMargin: '0px',
+      threshold: 0.3 // Trigger when 50% of the section is visible
+    };
+
+    this.observer = new IntersectionObserver(this.handleIntersections.bind(this), options);
+
+    this.navItems.forEach(item => {
+      const section = document.getElementById(item.section);
+      if (section) {
+        this.observer!.observe(section); // Use non-null assertion operator here
+      }
+    });
+  }
+
+  handleIntersections(entries: IntersectionObserverEntry[]): void {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const visibleSectionId = this.navItems.find(item => item.section === entry.target.id)?.id;
+        if (visibleSectionId) {
+          this.setActive(visibleSectionId);
+        }
+      }
+    });
   }
 }

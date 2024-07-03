@@ -8,14 +8,15 @@
 
   <nav class="fixed top-44 flex flex-col justify-center items-start p-10 w-1/6">
     <ul class="flex flex-col justify-center items-start p-15">
- <app-nav-item 
+      <app-nav-item 
       *ngFor="let item of navItems" 
       [item]="item" 
       [activeLinkId]="activeLinkId" 
       (setActiveLink)="setActive($event)">
-    </app-nav-item>    </ul>
+    </app-nav-item> 
+     </ul>
   </nav>
-  
+
 
 
 
@@ -44,6 +45,6 @@
         </ul>
       </div>
     </div>
-    <img src="/assets/image.png" class="h-full opacity-80" alt="" />
+    <img src="/assets/image.png" class="h-full " alt="" />
   </div>
 </section>
