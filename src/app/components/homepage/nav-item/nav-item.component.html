@@ -1,0 +1,10 @@
+<li class="mb-6 nav-link cursor-pointer p-4 bg-gray-800 rounded-3xl transition-all ease-out"
+    [class.active]="activeLinkId === item.id"
+    (click)="setActive()">
+  <a href="#{{ item.section }}" class="flex items-center space-x-2 hover:text-white">
+    <i class="fas text-white transition-all duration-1000 ease-out text-lg" [class]="item.icon"></i>
+    <span class="hidden md:inline transition-all duration-1500 ease-out text-md">
+      {{ item.label }}
+    </span>
+  </a>
+</li>

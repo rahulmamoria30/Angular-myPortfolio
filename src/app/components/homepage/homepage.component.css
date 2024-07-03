@@ -6,25 +6,7 @@
     width: 100%;
 }
 
-.nav-link {
-    transition: all 0.3s ease-out;
-}
 
-.nav-link:hover {
-    background-color: #3b82f6;
-}
-
-.nav-link:hover span {
-    display: inline;
-}
-
-.nav-link span {
-    display: none;
-}
-
-.nav-link.active {
-    background-color: #3b82f6; /* Change background color when active */
-}
 
 .fas {
     font-size: 20px; /* Adjust the size of the icons */

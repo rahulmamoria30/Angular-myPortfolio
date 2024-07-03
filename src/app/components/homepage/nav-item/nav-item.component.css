@@ -1,0 +1,20 @@
+.nav-link {
+    transition: all 0.3s ease-out;
+}
+
+.nav-link:hover {
+    background-color: #3b82f6;
+    color: #fff;
+}
+
+.nav-link:hover span {
+    display: inline;
+}
+
+.nav-link span {
+    display: none;
+}
+
+.nav-link.active {
+    background-color: #3b82f6; 
+}
