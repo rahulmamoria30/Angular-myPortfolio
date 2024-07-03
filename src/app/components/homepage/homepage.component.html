@@ -1,0 +1,134 @@
+<section class="homepage relative ">
+    <!-- Navigation -->
+    <div class="absolute left-10 top-3 p-4 font-thin  text-gray-800  text-6xl">
+      R
+    </div>
+    <nav class="fixed top-44 flex flex-col justify-center items-start p-10 w-1/6">
+        <ul class="flex flex-col justify-center items-start p-15">
+          <li
+            id="nav-home"
+            class="mb-6 nav-link cursor-pointer p-4 bg-gray-800 rounded-3xl transition-all ease-out"
+            [class.active]="activeLinkId === 'nav-home'"
+            (click)="scrollToSection('home')"
+          >
+            <a href="#home" class="flex items-center space-x-2 hover:text-white">
+              <i
+                class="fas fa-home text-white transition-all duration-1000 ease-out text-lg"
+              ></i>
+              <span
+                class="hidden md:inline transition-all duration-1500 ease-out text-md"
+                >Home</span
+              >
+            </a>
+          </li>
+          <li
+            id="nav-about"
+            class="mb-6 nav-link cursor-pointer px-5 py-4 bg-gray-800 rounded-3xl transition-all ease-out"
+            [class.active]="activeLinkId === 'nav-about'"
+            (click)="scrollToSection('about')"
+          >
+            <a href="#about" class="flex items-center space-x-2 hover:text-white">
+              <i
+                class="fas fa-user text-white transition-all duration-1000 ease-out text-lg"
+              ></i>
+              <span
+                class="hidden md:inline transition-all duration-1500 ease-out text-md"
+                >About</span
+              >
+            </a>
+          </li>
+          <li
+            id="nav-resume"
+            class="mb-6 nav-link cursor-pointer px-5 py-4 bg-gray-800 rounded-3xl transition-all ease-out"
+            [class.active]="activeLinkId === 'nav-resume'"
+            (click)="scrollToSection('resume')"
+          >
+            <a
+              href="#resume"
+              class="flex items-center space-x-2 hover:text-white"
+            >
+              <i
+                class="fas fa-file-alt text-white transition-all duration-1000 ease-out text-lg"
+              ></i>
+              <span
+                class="hidden md:inline transition-all duration-1500 ease-out text-md"
+                >Resume</span
+              >
+            </a>
+          </li>
+          <li
+            id="nav-projects"
+            class="mb-6 nav-link cursor-pointer p-4 bg-gray-800 rounded-3xl transition-all ease-out"
+            [class.active]="activeLinkId === 'nav-projects'"
+            (click)="scrollToSection('projects')"
+          >
+            <a
+              href="#projects"
+              class="flex items-center space-x-2 hover:text-white"
+            >
+              <i
+                class="fas fa-briefcase text-white transition-all duration-1000 ease-out text-lg"
+              ></i>
+              <span
+                class="hidden md:inline transition-all duration-1500 ease-out text-md"
+                >Projects</span
+              >
+            </a>
+          </li>
+          <li
+            id="nav-contact"
+            class="mb-6 nav-link cursor-pointer p-4 bg-gray-800 rounded-3xl transition-all ease-out"
+            [class.active]="activeLinkId === 'nav-contact'"
+            (click)="scrollToSection('contact')"
+          >
+            <a
+              href="#contact"
+              class="flex items-center space-x-2 hover:text-white"
+            >
+              <i
+                class="fas fa-envelope text-white transition-all duration-1000 ease-out text-lg"
+              ></i>
+              <span
+                class="hidden md:inline transition-all duration-1500 ease-out text-md"
+                >Contact</span
+              >
+            </a>
+          </li>
+        </ul>
+      </nav>
+    <div
+      class=" flex justify-between items-center h-screen text-white opacity-100"
+    >
+     
+  
+      <!-- Name and Role Section -->
+      <div class="text-start ml-64 ">
+        <h1 class="text-7xl font-bold text-gray-800 mb-5">Rahul Mamoria</h1>
+        <p class="text-2xl text-gray-600">
+          I'm <span class="custom-underlined">{{ displayedRole }}</span>
+        </p>
+  
+        <div class="text-gray-600 mt-5">
+          <ul class="flex gap-7">
+            <li>
+              <a href="https://x.com/rahul_rm__" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/rahulmm07/" target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </li>
+            <li><a href="https://www.instagram.com/rahul_rm__/" target="_blank"><i class="fab fa-instagram"></i> </a></li>
+            <li><i class="fab fa-facebook"></i></li>
+          </ul>
+        </div>
+      </div>
+      <img src="/assets/image.png" class="h-full opacity-80" alt="" />
+    </div>
+  </section>
+  
+  
+  
+  

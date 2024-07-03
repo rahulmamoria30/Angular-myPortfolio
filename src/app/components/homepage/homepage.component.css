@@ -1,0 +1,62 @@
+.homepage {
+    background: linear-gradient(rgba(108, 108, 108, 0.3), rgba(0, 0, 0, 0.3));
+    background-size: cover;
+    height: 100vh;
+    color: black;
+    width: 100%;
+}
+
+.nav-link {
+    transition: all 0.3s ease-out;
+}
+
+.nav-link:hover {
+    background-color: #3b82f6;
+}
+
+.nav-link:hover span {
+    display: inline;
+}
+
+.nav-link span {
+    display: none;
+}
+
+.nav-link.active {
+    background-color: #3b82f6; /* Change background color when active */
+}
+
+.fas {
+    font-size: 20px; /* Adjust the size of the icons */
+}
+
+.fab {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.fab:hover {
+    color: #3b82f6;
+}
+
+.custom-underlined {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.custom-underlined::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust the distance from text */
+    width: 100%;
+    height: 1px;
+    background-color: #3b82f6; /* Change underline color */
+    transition: width 1s ease-out; /* Optional: Add transition effect */
+}
+
+.custom-underlined:hover::after {
+    width: 0; /* Optional: Hide underline on hover */
+}
