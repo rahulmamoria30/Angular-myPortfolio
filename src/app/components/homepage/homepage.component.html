@@ -1,50 +1,95 @@
 <section class="homepage relative">
   <!-- Header -->
-  <header class="absolute left-2 top-3 p-4 flex justify-between items-center font-thin text-gray-800 text-6xl w-1/2">
-    <p [ngClass]="{'text-gray-800': !darkMode, 'text-gray-300': darkMode}">R</p>
-    <button (click)="toggleDarkMode()" class="text-center bg-transparent border-none cursor-pointer">
-      <i class="fa-regular fa-moon text-4xl"></i>
+  <header
+    class="absolute left-2 top-3 p-4 flex justify-between items-center font-thin text-6xl w-1/2"
+    [ngClass]="{ 'text-gray-800': !darkMode, 'text-gray-300': darkMode }"
+  >
+    <p>R</p>
+    <button
+      (click)="toggleDarkMode()"
+      class="flex justify-center items-center gap-1 bg-transparent border-none cursor-pointer"
+    >
+      <i
+        class="material-icons text-3xl hover:text-gray-500 transition-colors duration-300"
+      >
+        {{ darkMode ? "wb_sunny" : "brightness_3" }}
+      </i> <span class="text-xl">{{darkMode?"Dark Mode":"Light Mode"}}</span>
     </button>
   </header>
 
   <!-- Navigation -->
-  <nav class="fixed top-60 left-0 flex flex-col justify-center items-start p-4 w-1/6">
+  <nav
+    class="fixed top-60 left-0 flex flex-col justify-center items-start p-4 w-1/6"
+  >
     <ul class="flex flex-col justify-center items-start p-15">
-      <app-nav-item 
-        *ngFor="let item of navItems" 
-        [item]="item" 
-        [activeLinkId]="activeLinkId" 
-        (setActiveLink)="setActive($event)">
-      </app-nav-item> 
+      <app-nav-item
+        *ngFor="let item of navItems"
+        [item]="item"
+        [activeLinkId]="activeLinkId"
+        (setActiveLink)="setActive($event)"
+      >
+      </app-nav-item>
     </ul>
   </nav>
 
   <!-- Main Content -->
-  <main class="flex justify-between items-center h-screen text-white opacity-100">
-    <div class="text-start ml-64" >
-        <p class="text-7xl font-bold mb-5" [ngClass]="{'text-gray-800': !darkMode, 'text-gray-300': darkMode, 'text-7xl': true, 'font-bold': true, 'mb-5': true}">
+  <main
+    class="flex justify-between items-center h-screen text-white opacity-100"
+  >
+    <div class="text-start ml-64">
+      <p
+        class="text-7xl font-bold mb-5"
+        [ngClass]="{
+          'text-gray-800': !darkMode,
+          'text-gray-400': darkMode,
+          'text-7xl': true,
+          'font-bold': true,
+          'mb-5': true
+        }"
+      >
         Rahul Mamoria
       </p>
       <!-- <p class="text-2xl text-gray-600 mt-4"> -->
-        <p class="text-2xl" [ngClass]="{'text-gray-800': !darkMode, 'text-gray-300': darkMode}">
+      <p
+        class="text-2xl"
+        [ngClass]="{ 'text-gray-800': !darkMode, 'text-gray-300': darkMode }"
+      >
         I'm <span class="custom-underlined">{{ displayedRole }}</span>
       </p>
       <!-- <div class="text-gray-600 mt-6"> -->
-        <div class="text-2xl mt-6" [ngClass]="{'text-gray-600': !darkMode, 'text-gray-300': darkMode }">
+      <div
+        class="text-2xl mt-6"
+        [ngClass]="{
+          'text-gray-600': !darkMode,
+          'text-gray-300': darkMode,
+          'text-2xl': true,
+          'mt-6': true
+        }"
+      >
         <ul class="flex gap-7">
           <li>
-            <a href="https://x.com/rahul_rm__" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://x.com/rahul_rm__" target="_blank"
+              ><i class="fab fa-twitter"></i
+            ></a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/rahulmm07/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/rahulmm07/" target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
           </li>
           <li>
-            <a href="https://www.instagram.com/rahul_rm__/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/rahul_rm__/" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
           </li>
           <li><i class="fab fa-facebook"></i></li>
         </ul>
       </div>
     </div>
-    <img src="/assets/image.png" class="h-full opacity-70" alt="Rahul Mamoria's Image" />
+    <img
+      src="/assets/image.png"
+      class="h-full opacity-70"
+      alt="Rahul Mamoria's Image"
+    />
   </main>
 </section>

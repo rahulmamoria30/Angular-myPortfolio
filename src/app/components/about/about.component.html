@@ -1,11 +1,14 @@
 <div class="container mx-auto p-8">
-  <h2 class="text-4xl font-bold text-center text-gray-700 mb-2">About</h2>
+  <p class="text-4xl font-bold text-center"
+     [ngClass]="{'text-gray-800': !darkMode, 'text-gray-300': darkMode}">
+    About
+  </p>
   
   <div class="flex justify-center mb-6">
     <div class="w-16 h-1 bg-blue-500"></div>
   </div>
   
-  <p class="text-gray-800 text-lg font-light">
+  <p class="text-gray-800 text-lg font-light"   [ngClass]="{'text-gray-800': !darkMode, 'text-gray-300': darkMode}">
     Rahul Mamoria, a dedicated software engineer, thrives on problem-solving and creating impactful solutions. Passionate about innovation and teamwork, I strive to make a difference through technology.
   </p>
   
@@ -14,13 +17,13 @@
       <img src="/assets/my-image.png" alt="UI/UX Designer" class="rounded-lg ">
     </div>
     
-    <div class="md:w-2/3 md:pl-8 font-light">
+    <div class="md:w-2/3 md:pl-8 font-light"   [ngClass]="{'text-gray-800': !darkMode, 'text-gray-300': darkMode}">
       <h2 class="text-2xl font-semibold mb-4">Full Stack Developer & Designer</h2>
       
-      <p class="mb-4 text-gray-700 leading-7 text-lg">
+      <p class="mb-4  leading-7 text-lg">
         Hello! I'm Rahul Mamoria, a Software Engineer based in India. I have a passion for software development, encompassing the entire lifecycle from conception and design to implementation, testing, and deployment. On the frontend, I specialize in React.js or Next.js, and on the backend, I prefer Node.js + Express.js and MongoDB database. I'm proficient with tools like Figma for designing and prototyping, and GCP Cloud infrastructure for deployment.
       </p>
-      <p class="mt-4 mb-4 text-gray-700 leading-7 text-lg">
+      <p class="mt-4 mb-4 leading-7 text-lg">
         Outside of coding, I enjoy working out at the gym, playing badminton, and swimming. I also have a fondness for cafe racers and love taking bike rides on overcast days      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <!-- <p class="mb-2"><i class="fa-solid fa-chevron-right text-blue-500"></i><span class="font-semibold">Birthday:</span> 30 Oct 2001</p> -->

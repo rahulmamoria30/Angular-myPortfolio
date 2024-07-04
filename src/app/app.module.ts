@@ -14,6 +14,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { MatIconModule } from '@angular/material/icon';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatExpansionModule,
-    MatIconModule
+    MatIconModule,
+    MatMenuModule
     
   ],
   providers: [],
