@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit , Renderer2} from '@angular/core';
 
 @Component({
   selector: 'app-homepage',
@@ -6,6 +6,20 @@ import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit, OnDestroy, AfterViewInit {
+  darkMode = false;
+
+  constructor(private renderer: Renderer2) {}
+
+  toggleDarkMode() {
+    this.darkMode = !this.darkMode;
+    if (this.darkMode) {
+      this.renderer.addClass(document.body, 'dark-theme');
+    } else {
+      this.renderer.removeClass(document.body, 'dark-theme');
+    }
+  }
+
+
 
   activeLinkId: string = 'nav-home';
   roles: string[] = ["Developer", "Software Engineer", "Designer"];
@@ -23,7 +37,7 @@ export class HomepageComponent implements OnInit, OnDestroy, AfterViewInit {
 
   private observer: IntersectionObserver | null = null;
 
-  constructor() { }
+  // constructor() { }
 
   ngOnInit(): void {
     this.setActive('nav-home'); 
@@ -91,4 +105,5 @@ export class HomepageComponent implements OnInit, OnDestroy, AfterViewInit {
       }
     });
   }
+
 }
