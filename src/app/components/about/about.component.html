@@ -45,79 +45,20 @@
 
 
 <div class="container mx-auto px-4 py-8">
-  <h2 class="text-4xl font-bold text-center text-gray-700 mb-2">Skills</h2>
+  <p class="text-4xl font-bold text-center"
+     [ngClass]="{'text-gray-800': !darkMode, 'text-gray-300': darkMode}">
+    Technical Skills
+  </p>
   
   <div class="flex justify-center mb-6">
     <div class="w-16 h-1 bg-blue-500"></div>
   </div>
+  <p class="text-center text-xl font-light" [ngClass]="{'text-gray-800': !darkMode, 'text-gray-300': darkMode}">Skills that I developed over the years</p>
+
   
-  <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-    Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit
-  </p>
-  
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <div class="space-y-4 p-5 shadow-lg rounded-sm">
-      <div class="skill-bar">
-        <div class="flex justify-between mb-1">
-          <span class="font-medium">HTML</span>
-          <span>100%</span>
-        </div>
-        <div class="w-full bg-gray-200 rounded-full h-2.5">
-          <div class="bg-blue-600 h-2.5 rounded-full" style="width: 100%"></div>
-        </div>
-      </div>
-      
-      <div class="skill-bar">
-        <div class="flex justify-between mb-1">
-          <span class="font-medium">CSS</span>
-          <span>90%</span>
-        </div>
-        <div class="w-full bg-gray-200 rounded-full h-2.5">
-          <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
-        </div>
-      </div>
-      
-      <div class="skill-bar">
-        <div class="flex justify-between mb-1">
-          <span class="font-medium">JAVASCRIPT</span>
-          <span>75%</span>
-        </div>
-        <div class="w-full bg-gray-200 rounded-full h-2.5">
-          <div class="bg-blue-600 h-2.5 rounded-full" style="width: 75%"></div>
-        </div>
-      </div>
+  <div class="flex flex-wrap justify-center gap-8">
+    <div class="flex flex-wrap justify-center gap-8 mt-4">
+      <app-skills *ngFor="let skill of skills" [skill]="skill" ></app-skills>
     </div>
-    
-    <div class="space-y-4 p-5 shadow-lg rounded-sm">
-      <div class="skill-bar">
-        <div class="flex justify-between mb-1">
-          <span class="font-medium">React.js</span>
-          <span>80%</span>
-        </div>
-        <div class="w-full bg-gray-200 rounded-full h-2.5">
-          <div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
-        </div>
-      </div>
-      
-      <div class="skill-bar">
-        <div class="flex justify-between mb-1">
-          <span class="font-medium">Next.js</span>
-          <span>90%</span>
-        </div>
-        <div class="w-full bg-gray-200 rounded-full h-2.5">
-          <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
-        </div>
-      </div>
-      
-      <div class="skill-bar">
-        <div class="flex justify-between mb-1">
-          <span class="font-medium">PHOTOSHOP</span>
-          <span>55%</span>
-        </div>
-        <div class="w-full bg-gray-200 rounded-full h-2.5">
-          <div class="bg-blue-600 h-2.5 rounded-full" style="width: 55%"></div>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
 </div>

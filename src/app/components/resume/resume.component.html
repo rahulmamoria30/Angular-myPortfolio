@@ -1,84 +1,101 @@
 <div class="container mx-auto px-4 py-8">
-  <p class="text-3xl font-bold text-gray-800 mb-6">Work Experience</p>
+  <p class="text-4xl font-bold text-center"
+    [ngClass]="{ 'text-gray-800': !darkMode, 'text-gray-300': darkMode }">
+    Work Experiences
+  </p>
+
+  <div class="flex justify-center mb-6">
+    <div class="w-16 h-1 bg-blue-500"></div>
+  </div>
 
   <!-- Grid Dynamics -->
   <div class="mb-8">
-    <mat-expansion-panel expanded>
+    <mat-expansion-panel [class.bg-light]="!darkMode" expanded>
       <mat-expansion-panel-header class="p-4">
         <mat-panel-title>
-          <mat-icon>chevron_right</mat-icon> <span class="text-xl font-bold">Grid Dynamics</span> 
+          <mat-icon [ngClass]="{ 'text-gray-800': !darkMode, 'text-gray-300': darkMode }">chevron_right</mat-icon>
+          <span class="text-xl font-light"  [ngClass]="{ 'text-gray-800': !darkMode, 'text-gray-300': darkMode }">Grid Dynamics</span>
         </mat-panel-title>
       </mat-expansion-panel-header>
-      <div class="mb-8 leading-6">
-        <div class="flex justify-between items-center ">
-          <p class="text-gray-200 text-xl">Junior Software Engineer</p>
+      <div class="mb-8 leading-6 font-light text-lg">
+        <div class="flex justify-between items-center">
+          <p class=" text-xl font-bold" >Junior Software Engineer</p>
           <p>March, 2024 - Present</p>
-
         </div>
         <div class="p-4">
-          <p class="text-gray-200 text-md">
-            At Grid Dynamics, I specialize in React.js and Next.js for dynamic web applications, focusing on responsive UIs and scalable codebases. I excel in agile environments, contributing to frontend solutions that adhere to best practices.
+          <p class=" text-lg">
+            At Grid Dynamics, I specialize in React.js and Next.js for dynamic
+            web applications, focusing on responsive UIs and scalable codebases.
+            I excel in agile environments, contributing to frontend solutions
+            that adhere to best practices.
           </p>
-    
-          <ul class="list-disc list-inside ml-4 text-md">
-            <li class="mb-2">Expertise in React.js and Next.js for dynamic web applications.</li>
-            <li class="mb-2">Skilled in creating responsive UIs and scalable codebases.</li>
-            <li class="mb-2">Proven success in agile development environments..</li>
+
+          <ul class="list-disc list-inside ml-4 text-lg">
+            <li class="mb-2">
+              Expertise in React.js and Next.js for dynamic web applications.
+            </li>
+            <li class="mb-2">
+              Skilled in creating responsive UIs and scalable codebases.
+            </li>
+            <li class="mb-2">
+              Proven success in agile development environments.
+            </li>
           </ul>
-
         </div>
-
       </div>
 
-      <div class="mb-8 leading-6">
-         <div class="flex justify-between items-center ">
-          <p class="text-gray-100 text-xl">Software Engineer Intern</p>
+      <div class="mb-8 leading-6 font-light">
+        <div class="flex justify-between items-center text-lg">
+          <p class=" text-xl font-bold">Software Engineer Intern</p>
           <p>Sept, 2023 - March, 2024</p>
         </div>
 
-
         <div class="p-4">
-          <p class="text-gray-200 text-md">
-             As a UI Developer intern, I transformed design concepts into responsive interfaces using JavaScript and React, gaining hands-on experience in professional web development.
-           </p>
-           <ul class="list-disc list-inside ml-4 text-md">
-             <li>
-               Hands-on experience in JavaScript and React for responsive interfaces..</li>
-             <li>Exposure to professional web development practices</li>
-           </ul>
-
+          <p class="text-lg">
+            As a UI Developer intern, I transformed design concepts into
+            responsive interfaces using JavaScript and React, gaining hands-on
+            experience in professional web development.
+          </p>
+          <ul class="list-disc list-inside ml-4 text-lg">
+            <li class="mb-2">
+              Hands-on experience in JavaScript and React for responsive
+              interfaces.
+            </li>
+            <li class="mb-2">Exposure to professional web development practices</li>
+          </ul>
         </div>
-
       </div>
     </mat-expansion-panel>
   </div>
 
   <!-- Flyzy -->
   <div class="mb-8">
-    <mat-expansion-panel expanded>
-      <mat-expansion-panel-header>
+    <mat-expansion-panel [class.bg-light]="!darkMode" [class.bg-dark]="darkMode" expanded>
+      <mat-expansion-panel-header class="p-4">
         <mat-panel-title>
-          <mat-icon>chevron_right</mat-icon><span class="text-xl font-bold">Flyzy</span> 
+          <mat-icon [ngClass]="{ 'text-gray-800': !darkMode, 'text-gray-300': darkMode }">chevron_right</mat-icon>
+          <span class="text-xl font-light"  [ngClass]="{ 'text-gray-800': !darkMode, 'text-gray-300': darkMode }">Flyzy</span>
         </mat-panel-title>
       </mat-expansion-panel-header>
-      <div class="flex justify-between items-center ">
-        <p class="text-gray-200 text-xl">Backend Developer Intern</p>
-        <p>Jun, 2023 - August, 2024</p>
-
+      <div class="flex justify-between items-center font-light text-lg">
+        <p class=" text-xl font-bold" >Backend Developer Intern</p>
+        <p>Jun, 2023 - August, 2023</p>
       </div>
       <div class="p-4">
-        <p class="text-gray-200 text-md">
-          At Grid Dynamics, I specialize in React.js and Next.js for dynamic web applications, focusing on responsive UIs and scalable codebases. I excel in agile environments, contributing to frontend solutions that adhere to best practices.
+        <p class=" text-lg font-light">
+          At Flyzy, I focused on backend development, handling application logic, databases, and APIs to ensure efficient backend operations.
         </p>
-  
-        <ul class="list-disc list-inside ml-4 text-md">
-          <li class="mb-2">Expertise in React.js and Next.js for dynamic web applications.</li>
-          <li class="mb-2">Skilled in creating responsive UIs and scalable codebases.</li>
-          <li class="mb-2">Proven success in agile development environments..</li>
-        </ul>
 
+        <ul class="list-disc list-inside ml-4 text-lg font-light">
+          <li class="mb-2">
+            Backend development focusing on application logic and databases.
+          </li>
+          <li class="mb-2">
+            Experience with backend processes and API integration.
+          </li>
+         
+        </ul>
       </div>
     </mat-expansion-panel>
   </div>
-
 </div>
