@@ -1,6 +1,7 @@
 .homepage {
     background: linear-gradient(rgba(108, 108, 108, 0.3), rgba(0, 0, 0, 0.3));
-    background-size: cover;
+    /* background-size: cover; */
+    background-position: center;
     height: 100vh;
     color: black;
     width: 100%;
@@ -47,4 +48,41 @@
 
 .custom-underlined:hover::after {
     width: 0; /* Optional: Hide underline on hover */
+}
+
+
+
+@media screen and (max-width:1024px){
+    .home_content{
+        padding-left: 50px;
+    }
+    .navbar{
+        display: none;
+    }
+    .title{
+        font-size: 48px;
+    }
+}
+@media screen and (max-width:425px){
+    .home_content{
+        /* padding-top: 0rem; */
+        flex-wrap: wrap;
+        padding-left: 50px;
+    }
+    .navbar{
+        display: none;
+    }
+    .title{
+        font-size: 48px;
+    }
+    .image_container{
+        padding: 0;
+        display: none;
+    }
+    .hero_image{
+        padding: 10px 10px;
+        text-align: center;
+        height: 25rem;
+        width: 16rem;
+    }
 }

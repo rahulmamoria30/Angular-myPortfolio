@@ -8,7 +8,7 @@ import { ThemeService } from 'src/app/theme.service';
 })
 export class HomepageComponent implements OnInit, OnDestroy, AfterViewInit {
   darkMode = false; // Default dark mode is false (light mode)
-
+  navVisible: boolean = false;
   activeLinkId: string = 'nav-home'; // Default active link id
   roles: string[] = ["Developer", "Software Engineer", "Designer"]; // Array of roles
   currentRoleIndex: number = 0; // Index for current role in roles array
@@ -46,6 +46,12 @@ export class HomepageComponent implements OnInit, OnDestroy, AfterViewInit {
 
   setActive(id: string) {
     this.activeLinkId = id; // Set active link by ID
+  }
+
+  toggleNav(){
+    this.navVisible = !this.navVisible;
+    console.log("clickeddd");
+    
   }
 
   startUpdatingRole(): void {
@@ -104,5 +110,8 @@ export class HomepageComponent implements OnInit, OnDestroy, AfterViewInit {
         }
       }
     });
+ 
   }
+
+  
 }

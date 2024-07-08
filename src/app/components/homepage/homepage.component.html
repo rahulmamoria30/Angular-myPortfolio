@@ -1,7 +1,7 @@
 <section class="homepage relative">
   <!-- Header -->
   <header
-    class="absolute left-2 top-3 p-4 flex justify-between items-center font-thin text-6xl w-1/2"
+    class="absolute left-2 top-3 p-4 flex justify-between items-center font-thin text-6xl w-full "
     [ngClass]="{ 'text-gray-800': !darkMode, 'text-gray-300': darkMode }"
   >
     <p>R</p>
@@ -15,11 +15,29 @@
         {{ darkMode ? "wb_sunny" : "brightness_3" }}
       </i> <span class="text-xl">{{darkMode?"Light Mode":"Dark Mode"}}</span>
     </button>
+  
+
+    <p class="cursor-pointer" (click)="toggleNav()">
+      <i class="fa-solid fa-bars " ></i> h
+    </p>
+    
+    <nav *if="navVisible" >
+      <div>
+        <ul>
+          <li>home</li>
+          <li>about</li>
+          <li>hehe</li>
+          <li>services</li>
+          <li>nice</li>
+        </ul>
+      </div>
+    </nav>
+  
   </header>
 
   <!-- Navigation -->
-  <nav
-    class="fixed top-60 left-0 flex flex-col justify-center items-start p-4 w-1/6"
+  <nav 
+    class="navbar fixed top-60 left-0 flex flex-col justify-center items-start p-4 w-1/6 "
   >
     <ul class="flex flex-col justify-center items-start p-15">
       <app-nav-item
@@ -34,11 +52,11 @@
 
   <!-- Main Content -->
   <main
-    class="flex justify-between items-center h-screen text-white opacity-100"
+    class="home_content flex  justify-between items-center h-screen pl-40"
   >
-    <div class="text-start ml-64">
+    <div class="text-start">
       <p
-        class="text-7xl font-bold mb-5"
+        class="title text-7xl font-bold mb-5"
         [ngClass]="{
           'text-gray-800': !darkMode,
           'text-gray-400': darkMode,
@@ -86,10 +104,12 @@
         </ul>
       </div>
     </div>
-    <img
-      src="/assets/image.png"
-      class="h-full opacity-90"
-      alt="Rahul Mamoria's Image"
-    />
+    <div class="image_container h-full">
+      <img
+        src="/assets/image.png"
+        class="hero_image h-full opacity-90"
+        alt="Rahul Mamoria's Image"
+      />
+    </div>
   </main>
 </section>
