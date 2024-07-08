@@ -1,11 +1,12 @@
 <section class="homepage relative">
   <!-- Header -->
   <header
-    class="absolute left-2 top-3 p-4 flex justify-between items-center font-thin text-6xl w-full "
+    class="absolute left-2 top-3 p-4 flex justify-between items-center font-thin text-6xl w-full px-10 "
     [ngClass]="{ 'text-gray-800': !darkMode, 'text-gray-300': darkMode }"
   >
-    <p>R</p>
-    <button
+    <div class="flex justify-between w-1/2">
+      <p>R</p>
+      <button
       (click)="toggleDarkMode()"
       class="flex justify-center items-center gap-1 bg-transparent border-none cursor-pointer"
     >
@@ -15,26 +16,31 @@
         {{ darkMode ? "wb_sunny" : "brightness_3" }}
       </i> <span class="text-xl">{{darkMode?"Light Mode":"Dark Mode"}}</span>
     </button>
+    </div>
+    
   
 
-    <p class="cursor-pointer" (click)="toggleNav()">
-      <i class="fa-solid fa-bars " ></i> h
-    </p>
     
-    <nav *if="navVisible" >
-      <div>
-        <ul>
-          <li>home</li>
-          <li>about</li>
-          <li>hehe</li>
-          <li>services</li>
-          <li>nice</li>
-        </ul>
-      </div>
-    </nav>
+    <!-- Navigation Menu -->
+
+       <button class="hidden cursor-pointer z-20 text-3xl toggle " (click)="toggleNav()">
+         <i class="fa-solid fa-bars"></i> 
+       </button>
+
+       <nav *ngIf="navVisible" class="animated-nav absolute top-10 left-0 h-screen w-1/2 z-10">
+         <div>
+           <ul class="text-2xl">
+             <li>Home</li>
+             <li>About</li>
+             <li>Services</li>
+             <li>Contact</li>
+             <li>More</li>
+           </ul>
+         </div>
+       </nav>
   
   </header>
-
+ 
   <!-- Navigation -->
   <nav 
     class="navbar fixed top-60 left-0 flex flex-col justify-center items-start p-4 w-1/6 "

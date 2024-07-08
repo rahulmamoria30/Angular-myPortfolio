@@ -50,8 +50,23 @@
     width: 0; /* Optional: Hide underline on hover */
 }
 
+/* .toggle{
+    display: none;
+} */
 
-
+@keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Show the toggle button when screen width is 1024px or less */
+  
 @media screen and (max-width:1024px){
     .home_content{
         padding-left: 50px;
@@ -59,10 +74,35 @@
     .navbar{
         display: none;
     }
+    .toggle{
+        display: block;
+        animation: slideIn 0.5s ease-out forwards;
+    }
     .title{
         font-size: 48px;
     }
 }
+.animated-nav {
+    animation: slideIn 0.5s ease-out forwards;
+    background-color: gray;
+    
+  }
+  
+  /* Optionally, if you want to animate the nav disappearing */
+  .animated-nav.slide-out {
+    animation: slideOut 0.5s ease-out forwards;
+  }
+@keyframes slideOut {
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+  
 @media screen and (max-width:425px){
     .home_content{
         /* padding-top: 0rem; */
