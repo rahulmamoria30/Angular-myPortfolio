@@ -103,7 +103,7 @@
     }
   }
   
-@media screen and (max-width:425px){
+@media screen and (max-width:450px){
     .home_content{
         /* padding-top: 0rem; */
         flex-wrap: wrap;
