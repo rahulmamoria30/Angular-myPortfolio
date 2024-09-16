@@ -7,7 +7,7 @@ import { ThemeService } from 'src/app/theme.service';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit, OnDestroy, AfterViewInit {
-  darkMode = false; // Default dark mode is false (light mode)
+  darkMode = true; // Default dark mode is false (light mode)
   navVisible: boolean = false;
   activeLinkId: string = 'nav-home'; // Default active link id
   roles: string[] = ["Developer", "Software Engineer", "Designer"]; // Array of roles

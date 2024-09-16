@@ -1,20 +1,20 @@
 <section class="homepage relative">
   <!-- Header -->
   <header
-    class="absolute left-2 top-3 p-4 flex justify-between items-center font-thin text-6xl w-full px-10 "
+    class="header absolute left-2 top-3 p-4 flex justify-between items-center font-thin text-6xl w-full px-10 "
     [ngClass]="{ 'text-gray-800': !darkMode, 'text-gray-300': darkMode }"
   >
     <div class="flex justify-between w-1/2">
       <p>R</p>
       <button
       (click)="toggleDarkMode()"
-      class="flex justify-center items-center gap-1 bg-transparent border-none cursor-pointer"
+      class="mode flex justify-center items-center gap-1 bg-transparent border-none cursor-pointer"
     >
       <i
-        class="material-icons text-3xl hover:text-gray-500 transition-colors duration-300"
+        class=" mode_icon material-icons text-3xl hover:text-gray-500 transition-colors duration-300"
       >
         {{ darkMode ? "wb_sunny" : "brightness_3" }}
-      </i> <span class="text-xl">{{darkMode?"Light Mode":"Dark Mode"}}</span>
+      </i> <span class="text-xl theme">{{darkMode?"Light Mode":"Dark Mode"}}</span>
     </button>
     </div>
     

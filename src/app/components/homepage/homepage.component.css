@@ -105,7 +105,6 @@
   
 @media screen and (max-width:450px){
     .home_content{
-        /* padding-top: 0rem; */
         flex-wrap: wrap;
         padding-left: 50px;
     }
@@ -125,4 +124,18 @@
         height: 25rem;
         width: 16rem;
     }
+
+    .header{
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+
+    }
+    .theme, .mode_icon{
+        font-size: 20px;
+    }
+   .mode{
+    margin-top: -20px;
+
+   }
 }
